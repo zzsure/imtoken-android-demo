@@ -2,6 +2,7 @@ package anzhi.com.imtokendemo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -68,6 +69,12 @@ public class CreateIdentityActivity extends AppCompatActivity {
                             Intent intent = new Intent(context, MnemonicExportActivity.class);
                             intent.putExtra("EthereumMnemonic", ethereumMnemonic.getMnemonic());
                             intent.putExtra("BitcoinMnemonic", bitcoinMnemonic.getMnemonic());
+                            identity.addWallet(ethereumWallet);
+                            identity.addWallet(bitcoinWallet);
+                            SharedPreferences.Editor editor = getSharedPreferences("ids", MODE_PRIVATE).edit();
+                            editor.putString("EthId", ethereumWallet.getId());
+                            editor.putString("BtcId", bitcoinWallet.getId());
+                            editor.commit();
                             context.startActivity(intent);
                         } else {
                             Log.i(TAG, "获取ETH钱包失败");
