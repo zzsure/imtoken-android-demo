@@ -27,10 +27,19 @@
                 android:textColor="#ffffff"
                 android:text="BTC-Wallet"/>
             <TextView
+                android:id="@+id/tv_btc_address"
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
-                android:text="余额"/>
+                android:text="地址："/>
+            <TextView
+                android:id="@+id/tv_btc_balance"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="余额："/>
 
         </LinearLayout>
 
@@ -50,10 +59,19 @@
                 android:textColor="#ffffff"
                 android:text="ETH-Wallet"/>
             <TextView
+                android:id="@+id/tv_eth_address"
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
-                android:text="余额"/>
+                android:text="地址："/>
+            <TextView
+                android:id="@+id/tv_eth_balance"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="余额："/>
         </LinearLayout>
 
         <Button
